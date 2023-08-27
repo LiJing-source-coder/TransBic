@@ -18,5 +18,5 @@ We provide an example to run TransBic as follows.
 ```
 > library(TransBic)
 > data(sim)
-> res_TransBic <- TransBic(sim)
+> res_TransBic <- TransBic(sim, tNum=3, sfra=0.9)
 ```
