@@ -1,0 +1,21 @@
+Package: TransBic
+Type: Package
+Version: 0.1.0
+Date: 2023-08-25
+Title: TransBic: extracting bucket trend-preserving biclusters for analysis of gene expression data
+Description: A novel biclustering algorithm and toolkit TransBic (identifying Biclusters by capturing consistent trends of expression changes from state Transitions) to accurately identify biclusters of BTP-patterns (bucket trend-preserving patterns) from gene expression datasets such as DNA-micro and RNA_seq.
+Authors@R: c(
+ person(given = "Jing", family = "Li", email = "jlisdu@outlook.com",role = c("cre","aut")),
+ person(given = "Guojun", family = "Li", email = "guojunsdu@gmail.com", role = "fnd")
+ )
+Depends: R (>= 4.3.0)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+biocViews: Clustering, GeneExpression, RNASeq, DNAmicro, Software, DifferentialExpression
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+Imports:
+   stats,
+   utils
+RoxygenNote: 7.2.3
