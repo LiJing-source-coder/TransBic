@@ -16,7 +16,7 @@ The input to TransBic is a gene expression matrix with rows being genes and colu
 We provide an example to run TransBic as follows.
 # Example
 ```
->library(TransBic)
->data(sim)
->res_TransBic <- TransBic(sim)
+> library(TransBic)
+> data(sim)
+> res_TransBic <- TransBic(sim)
 ```
