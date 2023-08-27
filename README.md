@@ -4,7 +4,7 @@ TransBic is an R toolkit for extracting bucket trend-preserving biclusters for a
 ```
 $ R
 > library("devtools")
-> devtools:install_github("LiJing-source-coder/TransBic")
+> devtools::install_github("LiJing-source-coder/TransBic")
 ```
 Now TransBic can be loaded in R:
 ```
