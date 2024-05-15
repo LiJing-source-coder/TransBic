@@ -28,7 +28,7 @@
 #'@examples
 #'data(sim)
 #'TransBic(sim,tNum=3,sfra = 0.9)
-TransBic<-function(data,minC=2,minR=2,e0=0.1,tfra=0.75,tNum=5,cfra=0.75,mfra=0.8,sfra=1)
+TransBic<-function(data,minC=2,minR=2,e0=0.1,tfra=0.75,tNum=40,cfra=0.75,mfra=0.8,sfra=0.5)
 {
   fraV_compute=function(c)
 {
@@ -181,7 +181,10 @@ while ((nrow(K_matrix)>1) && (max(K_matrix[lower.tri(K_matrix)])>0)){
       resCol<-res[[1]]
       resPr<-res[[2]]
       rowfra<-ceiling(length(resCol)*(1-e0))
-      rowNum<-apply(M_matrix[,resCol],1,sum)
+      {if(length(resCol)>1)
+      {rowNum<-apply(M_matrix[,resCol],1,sum)}
+        else
+        {rowNum<-M_matrix[,resCol]}}
       p<-sum(resPr[1:(length(resCol)-rowfra+1)])
       rowNa<-names(which(rowNum>=rowfra))
             if(length(rowNa)>=minR)
