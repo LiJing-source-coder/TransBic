@@ -64,7 +64,7 @@
   }
  ###
   clusterNum<-sapply(conditionList,function(n) length(n))
-  while(length(conditionList)>0 && (minC<length(conditionAll)) && (length(which(clusterNum<minC))>0))
+  while(length(conditionList)>1 && (minC<length(conditionAll)) && (length(which(clusterNum<minC))>0))
   {
     merC<-which(clusterNum<minC)
     merRat<-c()
