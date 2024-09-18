@@ -37,6 +37,7 @@ TransBic<-function(data,minC=2,minR=2,e0=0.1,tfra=0.75,tNum=40,cfra=0.75,mfra=0.
   }
 M_matrix<-rankingM_constructing(data)
 K_matrix<-M_matrix%*%t(M_matrix)
+diag(K_matrix)<-0
 bicList<-list()
 bicNum=1
 sNum<-0
